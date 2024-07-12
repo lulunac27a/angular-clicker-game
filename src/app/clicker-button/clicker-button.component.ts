@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ClickerButtonComponent {
   count = 0;
   increaseCount(amount: number = 1) {
-    this.count++;
+    this.count += amount;
   }
 
 }
