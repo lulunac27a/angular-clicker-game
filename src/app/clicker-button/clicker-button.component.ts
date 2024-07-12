@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './clicker-button.component.less'
 })
 export class ClickerButtonComponent {
-  count = 0;
-  count2 = 0;
-  count3 = 0;
+  count: number = 0;
+  count2: number = 0;
+  count3: number = 0;
   increaseCount(amount: number = 1) {
     this.count += amount;
   }
