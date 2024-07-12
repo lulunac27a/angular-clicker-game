@@ -12,13 +12,13 @@ export class ClickerButtonComponent {
   count2: number = 0;
   count3: number = 0;
   amount: number = 1;
-  increaseCount(amountSpecified: boolean = false) {
+  increaseCount(amountSpecified: boolean = false): void {
     this.count += amountSpecified ? this.amount : 1;
   }
-  increaseCount2(amountSpecified: boolean = false) {
+  increaseCount2(amountSpecified: boolean = false): void {
     this.count2 += amountSpecified ? this.amount * this.count : this.count;
   }
-  increaseCount3(amountSpecified: boolean = false) {
+  increaseCount3(amountSpecified: boolean = false): void {
     this.count3 += amountSpecified ? this.amount * this.count2 : this.count2;
   }
   changeValue(newValue: number) {
