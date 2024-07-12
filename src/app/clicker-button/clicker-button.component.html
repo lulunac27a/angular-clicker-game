@@ -1,6 +1,10 @@
+Amount to increase: <input type="number" min="1" max="9" step="1" id="amount" [value]="amount.value || 1" (change)="changeValue(+amount.value)" #amount>
 <button (click)="increaseCount()">Increase Counter 1 Count</button>
+<button (click)="increaseCount(true)">Increase Counter 1 Count by Amount</button>
 <p>Count: {{ count }}</p><br>
 <button (click)="increaseCount2()">Increase Counter 2 Count</button>
+<button (click)="increaseCount2(true)">Increase Counter 2 Count by Amount</button>
 <p>Count: {{ count2 }}</p><br>
 <button (click)="increaseCount3()">Increase Counter 3 Count</button>
+<button (click)="increaseCount3(true)">Increase Counter 3 Count by Amount</button>
 <p>Count: {{ count3 }}</p><br>

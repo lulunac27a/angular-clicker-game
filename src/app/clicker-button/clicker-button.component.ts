@@ -11,13 +11,17 @@ export class ClickerButtonComponent {
   count: number = 0;
   count2: number = 0;
   count3: number = 0;
-  increaseCount(amount: number = 1) {
-    this.count += amount;
+  amount: number = 1;
+  increaseCount(amountSpecified: boolean = false) {
+    this.count += amountSpecified ? this.amount: 1;
   }
-  increaseCount2(amount: number = 1) {
-    this.count2 += amount * this.count;
+  increaseCount2(amountSpecified: boolean = false) {
+    this.count2 += amountSpecified ? this.amount * this.count : this.count;
   }
-  increaseCount3(amount: number = 1) {
-    this.count3 += amount * this.count2;
+  increaseCount3(amountSpecified: boolean = false) {
+    this.count3 += amountSpecified ? this.amount * this.count2 : this.count2;
+  }
+  changeValue(newValue: number) {
+    this.amount = parseInt(String(Math.min(9, Math.max(1, newValue))));
   }
 }
