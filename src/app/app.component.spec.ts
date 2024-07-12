@@ -24,6 +24,14 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Angular Clicker Game');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Angular Clicker Game',
+    );
+  });
+  it('should display counter text', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('span')?.textContent).toContain('Count: 0');
   });
 });
