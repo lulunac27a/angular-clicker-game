@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './clicker-button.component.html',
-  styleUrl: './clicker-button.component.less'
+  styleUrl: './clicker-button.component.less',
 })
 export class ClickerButtonComponent {
   count: number = 0;
@@ -13,7 +13,7 @@ export class ClickerButtonComponent {
   count3: number = 0;
   amount: number = 1;
   increaseCount(amountSpecified: boolean = false) {
-    this.count += amountSpecified ? this.amount: 1;
+    this.count += amountSpecified ? this.amount : 1;
   }
   increaseCount2(amountSpecified: boolean = false) {
     this.count2 += amountSpecified ? this.amount * this.count : this.count;

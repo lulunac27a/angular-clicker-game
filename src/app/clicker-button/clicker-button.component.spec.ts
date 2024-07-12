@@ -8,10 +8,9 @@ describe('ClickerButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClickerButtonComponent]
-    })
-    .compileComponents();
-    
+      imports: [ClickerButtonComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ClickerButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
