@@ -26,6 +26,6 @@ export class ClickerButtonComponent {
   }
   changeValue(newValue: number) {
     //set amount value based on new value number
-    this.amount = parseInt(String(Math.min(9, Math.max(1, newValue)))); //set amount to integer from 1 to 9
+    this.amount = parseInt(String(Math.min(9, Math.max(1, newValue))), 10); //set amount to integer from 1 to 9
   }
 }
