@@ -13,15 +13,15 @@ export class ClickerButtonComponent {
   count3: number = 0;
   amount: number = 1; //set default amount to 1
   increaseCount(amountSpecified: boolean = false): void {
-    //if amount is specified, increase by specified amount, else increase by 1
+    //if the amount is specified, increase by specified amount, else increase by 1
     this.count += amountSpecified ? this.amount : 1; //increase first count
   }
   increaseCount2(amountSpecified: boolean = false): void {
-    //if amount is specified, increase by specified amount times first count, else increase by first count
+    //if the amount is specified, increase by specified amount times first count, else increase by first count
     this.count2 += amountSpecified ? this.amount * this.count : this.count; //increase second count
   }
   increaseCount3(amountSpecified: boolean = false): void {
-    //if amount is specified, increase by specified amount times second count, else increase by second count
+    //if the amount is specified, increase by specified amount times second count, else increase by second count
     this.count3 += amountSpecified ? this.amount * this.count2 : this.count2; //increase third count
   }
   changeValue(newValue: number) {
