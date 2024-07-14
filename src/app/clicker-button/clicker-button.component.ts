@@ -24,7 +24,7 @@ export class ClickerButtonComponent {
     //if the amount is specified, increase by specified amount times second count, else increase by second count
     this.count3 += amountSpecified ? this.amount * this.count2 : this.count2; //increase third count
   }
-  changeValue(newValue: number) {
+  changeValue(newValue: number): void {
     //set amount value based on new value number
     this.amount = parseInt(String(Math.min(9, Math.max(1, newValue))), 10); //set amount to integer from 1 to 9
   }
