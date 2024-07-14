@@ -24,7 +24,7 @@ describe('ClickerButtonComponent', () => {
     expect(component.count2).toEqual(0);
     expect(component.count3).toEqual(0);
   });
-  it('should update counts', () => {
+  it('should update counts and reset counts', () => {
     component.increaseCount(); //increase count
     expect(component.count).toEqual(1);
     component.changeValue(5); //change amount value
@@ -37,6 +37,10 @@ describe('ClickerButtonComponent', () => {
     component.changeValue(3);
     component.increaseCount3(true);
     expect(component.count3).toEqual(240);
+    component.resetCounts(); //reset all counter values
+    expect(component.count).toEqual(0);
+    expect(component.count2).toEqual(0);
+    expect(component.count3).toEqual(0);
   });
   it('should update non-integer amount values', () => {
     //assert non-integer amount values
